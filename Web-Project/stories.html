@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories – Medium</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stories.css">
+</head>
+<body>
+
+  <!-- TOP NAVBAR -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <a href="index.html" class="logo">Medium</a>
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="Search">
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="#" class="btn-getapp">⊞ Get app</a>
+    </div>
+  </nav>
+
+  <!-- PAGE WRAPPER -->
+  <div class="page-wrapper">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="left-sidebar">
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <span class="menu-icon"></span>
+          <a href="index.html">Home</a>
+        </li>
+        <li class="menu-item">
+          <span class="menu-icon"></span>
+          <a href="library.html">Library</a>
+        </li>
+        <li class="menu-item">
+          <span class="menu-icon"></span>
+          <a href="profile.html">Profile</a>
+        </li>
+        <li class="menu-item active">
+          <span class="menu-icon"></span>
+          <a href="stories.html">Stories</a>
+        </li>
+        <li class="menu-item">
+          <span class="menu-icon"></span>
+          <a href="#">Stats</a>
+        </li>
+      </ul>
+
+      <div class="sidebar-divider"></div>
+
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <span class="menu-icon"></span>
+          <a href="#">Following</a>
+        </li>
+      </ul>
+
+      <div class="find-writers">
+        <span class="find-plus">+</span>
+        <div>
+          <div class="find-title">Find writers and publications to follow.</div>
+          <a href="#" class="find-link">See suggestions</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="stories-main">
+
+      <h1 class="stories-title">Stories</h1>
+
+      <!-- TABS -->
+      <div class="stories-tabs">
+        <div class="stories-tab active">Drafts</div>
+        <div class="stories-tab">Scheduled</div>
+        <div class="stories-tab">Published</div>
+        <div class="stories-tab">Unlisted</div>
+        <div class="stories-tab">Submissions</div>
+      </div>
+
+      <!-- EMPTY STATE -->
+      <div class="empty-state">
+        <p class="empty-text">No stories in draft.</p>
+        <p class="empty-sub">Why not <a href="write.html" class="start-link">start writing one?</a></p>
+      </div>
+
+    </main>
+
+  </div><!-- /page-wrapper -->
+
+</body>
+</html>
