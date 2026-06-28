@@ -10,8 +10,6 @@ body{
     color:white;
 }
 
-/* HEADER */
-
 header{
     display:flex;
     justify-content:space-between;
@@ -107,8 +105,6 @@ nav a:hover{
     font-size:40px;
 }
 
-/* FEATURES */
-
 .features{
     padding:80px;
     text-align:center;
@@ -137,8 +133,6 @@ nav a:hover{
     color:#22c55e;
     margin-bottom:15px;
 }
-
-/* CHALLENGES */
 
 .challenges{
     padding:80px;
