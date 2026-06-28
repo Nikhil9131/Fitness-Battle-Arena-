@@ -8,13 +8,14 @@
 
     <link rel="stylesheet" href="home.css">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- ================= Header ================= -->
 
     <header>
 
@@ -23,131 +24,222 @@
         </div>
 
         <nav>
-        <a href="index.html">Home</a>
-        <a href="battle.html">Battle Mode</a>
-        <a href="challenge.html">Challenges</a>
-        <a href="leaderboard.html">Leaderboard</a>
-        <a href="profile.html">Profile</a>
-    </nav>
+
+            <a href="index.html">Home</a>
+            <a href="battle.html">Battle Mode</a>
+            <a href="challenge.html">Challenges</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="profile.html">Profile</a>
+
+        </nav>
+
+        <!-- Theme Switch Button -->
+        <button id="themeToggle">
+            🌙 Dark
+        </button>
 
     </header>
 
-    <!-- Hero Section -->
+    <!-- ================= Hero Section ================= -->
 
     <section class="hero">
 
         <div class="hero-text">
 
-            <h1>TRACK • COMPETE • TRANSFORM</h1>
+            <h1 id="heroTitle">
+                TRACK • COMPETE • TRANSFORM
+            </h1>
 
-            <p>
-                Join exciting fitness battles, participate in challenges,
-                compete with friends and achieve your fitness goals.
+            <p id="heroDescription">
+                Join exciting fitness battles,
+                participate in challenges,
+                compete with friends and achieve
+                your fitness goals.
             </p>
 
-            <button>Join Community</button>
+            <button id="joinBtn">
+                Join Community
+            </button>
 
         </div>
 
         <div class="hero-image">
 
-            <img src="images/hero.jpg" alt="Fitness Hero">
+            <img src="images/hero.jpg"
+                alt="Fitness Hero">
 
         </div>
 
     </section>
 
-    <!-- Statistics -->
+    <!-- ================= Statistics ================= -->
 
     <section class="stats">
 
         <div class="stat-card">
-            <h2>500+</h2>
-            <p>Active Members</p>
+
+            <h2 id="memberCount">
+                500+
+            </h2>
+
+            <p>
+                Active Members
+            </p>
+
         </div>
 
         <div class="stat-card">
-            <h2>100+</h2>
-            <p>Challenges</p>
+
+            <h2 id="challengeCount">
+                100+
+            </h2>
+
+            <p>
+                Challenges
+            </p>
+
         </div>
 
         <div class="stat-card">
-            <h2>10K+</h2>
-            <p>Workouts Logged</p>
+
+            <h2 id="workoutCount">
+                10K+
+            </h2>
+
+            <p>
+                Workouts Logged
+            </p>
+
         </div>
 
         <div class="stat-card">
-            <h2>50+</h2>
-            <p>Professional Trainers</p>
+
+            <h2 id="trainerCount">
+                50+
+            </h2>
+
+            <p>
+                Professional Trainers
+            </p>
+
         </div>
 
     </section>
 
-    <!-- Features -->
+    <!-- ================= Features ================= -->
 
     <section class="features">
 
-        <h2>Why Choose Us?</h2>
+        <h2>
+            Why Choose Us?
+        </h2>
 
         <div class="feature-container">
 
             <div class="feature-card">
+
                 <i class="fa-solid fa-dumbbell"></i>
-                <h3>Workout Tracking</h3>
-                <p>Track sets, reps, calories and progress.</p>
+
+                <h3>
+                    Workout Tracking
+                </h3>
+
+                <p>
+                    Track sets, reps,
+                    calories and progress.
+                </p>
+
             </div>
 
             <div class="feature-card">
+
                 <i class="fa-solid fa-trophy"></i>
-                <h3>Battle Mode</h3>
-                <p>Compete against friends and win rewards.</p>
+
+                <h3>
+                    Battle Mode
+                </h3>
+
+                <p>
+                    Compete against friends
+                    and win rewards.
+                </p>
+
             </div>
 
             <div class="feature-card">
+
                 <i class="fa-solid fa-ranking-star"></i>
-                <h3>Leaderboards</h3>
-                <p>Check rankings in real time.</p>
+
+                <h3>
+                    Leaderboards
+                </h3>
+
+                <p>
+                    Check rankings
+                    in real time.
+                </p>
+
             </div>
 
             <div class="feature-card">
+
                 <i class="fa-solid fa-fire"></i>
-                <h3>Daily Streaks</h3>
-                <p>Stay consistent and earn badges.</p>
+
+                <h3>
+                    Daily Streaks
+                </h3>
+
+                <p>
+                    Stay consistent
+                    and earn badges.
+                </p>
+
             </div>
 
         </div>
 
     </section>
 
-    <!-- Challenges Section -->
+    <!-- ================= Challenges ================= -->
 
     <section class="challenges">
 
-        <h2>Popular Challenges</h2>
+        <h2>
+            Popular Challenges
+        </h2>
 
         <div class="challenge-container">
 
             <div class="challenge-card">
 
-                <img src="images/pushup.jpeg" alt="Challenge">
+                <img src="images/pushup.jpeg"
+                    alt="Push-Up Challenge">
 
-                <h3>Push-Up Challenge</h3>
-
-            </div>
-
-            <div class="challenge-card">
-
-                <img src="images/running.jpeg" alt="Challenge">
-
-                <h3>10K Running Challenge</h3>
+                <h3>
+                    Push-Up Challenge
+                </h3>
 
             </div>
 
             <div class="challenge-card">
 
-                <img src="images/cycling.jpeg" alt="Challenge">
+                <img src="images/running.jpeg"
+                    alt="Running">
 
-                <h3>Cycling Challenge</h3>
+                <h3>
+                    10K Running Challenge
+                </h3>
+
+            </div>
+
+            <div class="challenge-card">
+
+                <img src="images/cycling.jpeg"
+                    alt="Cycling">
+
+                <h3>
+                    Cycling Challenge
+                </h3>
 
             </div>
 
@@ -155,19 +247,24 @@
 
     </section>
 
-    <!-- Transformation Section -->
+    <!-- ================= Transformation ================= -->
 
     <section class="transformation">
 
-        <h2>Transformation Journey</h2>
+        <h2>
+            Transformation Journey
+        </h2>
 
         <div class="transform-container">
 
             <div class="photo-card">
 
-                <img src="images/raj2.jpeg" alt="Before">
+                <img src="images/raj2.jpeg"
+                    alt="Before">
 
-                <h3>Day 1</h3>
+                <h3>
+                    Day 1
+                </h3>
 
             </div>
 
@@ -177,9 +274,12 @@
 
             <div class="photo-card">
 
-                <img src="images/raj1.jpeg" alt="After">
+                <img src="images/raj1.jpeg"
+                    alt="After">
 
-                <h3>Day 90</h3>
+                <h3>
+                    Day 90
+                </h3>
 
             </div>
 
@@ -187,17 +287,27 @@
 
     </section>
 
-    <!-- Footer -->
+    <!-- ================= Footer ================= -->
 
     <footer>
 
-        <h3>Fitness Battle Arena</h3>
+        <h3 id="footerHeading">
+            Fitness Battle Arena
+        </h3>
 
-        <p>
+        <p id="footerText">
             Train Hard • Stay Consistent • Become Stronger
         </p>
 
+        <p id="copyright">
+            © 2026 Fitness Battle Arena
+        </p>
+
     </footer>
+
+    <!-- JavaScript -->
+
+    <script src="home.js"></script>
 
 </body>
 

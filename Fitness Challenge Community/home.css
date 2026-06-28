@@ -8,7 +8,10 @@
 body{
     background:#0f172a;
     color:white;
+    transition:0.4s;
 }
+
+/* ================= HEADER ================= */
 
 header{
     display:flex;
@@ -18,6 +21,7 @@ header{
     background:#111827;
     position:sticky;
     top:0;
+    z-index:1000;
 }
 
 .logo{
@@ -37,7 +41,24 @@ nav a:hover{
     color:#22c55e;
 }
 
-/* HERO */
+/* Theme Button */
+
+#themeToggle{
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+#themeToggle:hover{
+    transform:scale(1.05);
+}
+
+/* ================= HERO ================= */
 
 .hero{
     display:flex;
@@ -70,6 +91,11 @@ nav a:hover{
     border-radius:30px;
     font-size:18px;
     cursor:pointer;
+    transition:.3s;
+}
+
+.hero-text button:hover{
+    transform:scale(1.05);
 }
 
 .hero-image{
@@ -82,7 +108,7 @@ nav a:hover{
     box-shadow:0 0 30px #22c55e;
 }
 
-/* STATS */
+/* ================= STATS ================= */
 
 .stats{
     display:flex;
@@ -98,12 +124,19 @@ nav a:hover{
     padding:30px;
     border-radius:20px;
     text-align:center;
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
 }
 
 .stat-card h2{
     color:#22c55e;
     font-size:40px;
 }
+
+/* ================= FEATURES ================= */
 
 .features{
     padding:80px;
@@ -126,6 +159,12 @@ nav a:hover{
     background:#1e293b;
     padding:30px;
     border-radius:20px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
 }
 
 .feature-card i{
@@ -133,6 +172,8 @@ nav a:hover{
     color:#22c55e;
     margin-bottom:15px;
 }
+
+/* ================= CHALLENGES ================= */
 
 .challenges{
     padding:80px;
@@ -152,6 +193,12 @@ nav a:hover{
     background:#1e293b;
     border-radius:20px;
     overflow:hidden;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.challenge-card:hover{
+    transform:scale(1.03);
 }
 
 .challenge-card img{
@@ -164,7 +211,7 @@ nav a:hover{
     padding:20px;
 }
 
-/* TRANSFORMATION */
+/* ================= TRANSFORMATION ================= */
 
 .transformation{
     padding:80px;
@@ -192,11 +239,107 @@ nav a:hover{
     color:#22c55e;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
     text-align:center;
     background:#111827;
     padding:40px;
     margin-top:50px;
+}
+
+/* ================================================= */
+/*                 LIGHT MODE                        */
+/* ================================================= */
+
+.light-mode{
+    background:#f4f4f4;
+    color:#222;
+}
+
+.light-mode header{
+    background:white;
+}
+
+.light-mode footer{
+    background:white;
+}
+
+.light-mode nav a{
+    color:#222;
+}
+
+.light-mode nav a:hover{
+    color:#22c55e;
+}
+
+.light-mode .logo{
+    color:#16a34a;
+}
+
+.light-mode .hero-text button{
+    background:#16a34a;
+}
+
+.light-mode .stat-card,
+.light-mode .feature-card,
+.light-mode .challenge-card{
+    background:white;
+    color:#222;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.light-mode .stat-card h2{
+    color:#16a34a;
+}
+
+.light-mode .feature-card i{
+    color:#16a34a;
+}
+
+.light-mode .arrow{
+    color:#16a34a;
+}
+
+.light-mode #themeToggle{
+    background:#111827;
+    color:white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text,
+    .hero-image{
+        width:100%;
+    }
+
+    .hero-text h1{
+        font-size:42px;
+    }
+
+    .stats,
+    .feature-container,
+    .challenge-container,
+    .transform-container{
+        flex-direction:column;
+        align-items:center;
+    }
 }

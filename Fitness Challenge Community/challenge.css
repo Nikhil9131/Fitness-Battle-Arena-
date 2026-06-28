@@ -1,63 +1,329 @@
-body{
-background:#0f172a;
-color:white;
-font-family:Arial;
-margin:0;
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
+body{
+    background:#0f172a;
+    color:white;
+    transition:0.4s;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
 header{
-display:flex;
-justify-content:space-between;
-padding:20px 8%;
-background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#22c55e;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
 }
+
+nav a:hover{
+    color:#22c55e;
+}
+
+/* Theme Button */
+
+#themeToggle{
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#themeToggle:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   TITLE
+=========================== */
 
 .title{
-text-align:center;
-padding:40px;
+    text-align:center;
+    padding:50px;
 }
 
+.title h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.title p{
+    color:#d1d5db;
+    font-size:18px;
+}
+
+/* ===========================
+   CHALLENGE GRID
+=========================== */
+
 .challenge-grid{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-padding:40px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:40px;
 }
 
 .challenge-card{
-width:300px;
-background:#1e293b;
-border-radius:20px;
-overflow:hidden;
+    width:320px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    transition:.3s;
+}
+
+.challenge-card:hover{
+    transform:translateY(-8px);
 }
 
 .challenge-card img{
-width:100%;
-height:220px;
-object-fit:cover;
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
 .challenge-card h3{
-padding:20px;
-text-align:center;
+    padding-top:20px;
+    margin-bottom:10px;
 }
 
+.challenge-card p{
+    margin-bottom:15px;
+}
+
+/* Buttons */
+
+.challenge-card button{
+    margin:8px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    color:white;
+    transition:.3s;
+}
+
+#join1,
+#join2,
+#join3{
+    background:#3b82f6;
+}
+
+#complete1,
+#complete2,
+#complete3{
+    background:#22c55e;
+}
+
+.challenge-card button:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   Progress
+=========================== */
+
+.progress{
+    width:90%;
+    height:18px;
+    background:#475569;
+    border-radius:20px;
+    margin:15px auto;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:#22c55e;
+    transition:.5s;
+}
+
+/* ===========================
+   Overall Progress
+=========================== */
+
+.overall{
+    text-align:center;
+    padding:50px;
+}
+
+.overall h2{
+    margin-bottom:20px;
+}
+
+#resetBtn{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ef4444;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#resetBtn:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   BADGES
+=========================== */
+
 .badges{
-text-align:center;
-padding:50px;
+    text-align:center;
+    padding:50px;
+}
+
+.badges h2{
+    margin-bottom:25px;
 }
 
 .badge{
-display:inline-block;
-padding:20px;
-margin:10px;
-background:#22c55e;
-border-radius:15px;
+    display:inline-block;
+    padding:20px;
+    margin:12px;
+    background:#22c55e;
+    border-radius:15px;
+    font-size:18px;
+    transition:.3s;
+}
+
+.badge:hover{
+    transform:scale(1.08);
+}
+
+.badge.active{
+    background:gold;
+    color:black;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* ===========================
+   LIGHT MODE
+=========================== */
+
+.light-mode{
+    background:#f4f4f4;
+    color:#111;
+}
+
+.light-mode header,
+.light-mode footer{
+    background:white;
+}
+
+.light-mode nav a{
+    color:#111;
+}
+
+.light-mode nav a:hover{
+    color:#22c55e;
+}
+
+.light-mode .challenge-card{
+    background:white;
+    color:#111;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.light-mode .progress{
+    background:#ddd;
+}
+
+.light-mode .progress-fill{
+    background:#16a34a;
+}
+
+.light-mode .badge{
+    background:#16a34a;
+    color:white;
+}
+
+.light-mode .badge.active{
+    background:gold;
+    color:black;
+}
+
+.light-mode #themeToggle{
+    background:#111827;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.challenge-grid{
+    flex-direction:column;
+    align-items:center;
+}
+
+.challenge-card{
+    width:90%;
+}
+
+.title h1{
+    font-size:32px;
+}
+
+.badge{
+    display:block;
+    margin:15px auto;
+    width:80%;
+}
+
 }

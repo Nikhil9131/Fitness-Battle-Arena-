@@ -1,57 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Challenges</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fitness Challenges</title>
+
 <link rel="stylesheet" href="challenge.css">
+
 </head>
+
 <body>
 
+<!-- ================= HEADER ================= -->
 
 <header>
-<div class="logo">Fitness Battle Arena</div>
+
+<div class="logo">
+
+Fitness Battle Arena
+
+</div>
 
 <nav>
+
 <a href="index.html">Home</a>
+
 <a href="battle.html">Battle Mode</a>
+
 <a href="challenge.html">Challenges</a>
+
 <a href="leaderboard.html">Leaderboard</a>
+
 <a href="profile.html">Profile</a>
+
 </nav>
+
+<button id="themeToggle">
+
+🌙 Dark
+
+</button>
+
 </header>
 
+<!-- ================= TITLE ================= -->
+
 <section class="title">
-<h1>🔥 Active Challenges</h1>
+
+<h1 id="pageTitle">
+
+🔥 Active Challenges
+
+</h1>
+
+<p id="status">
+
+Join a challenge and start your fitness journey.
+
+</p>
+
 </section>
+
+<!-- ================= CHALLENGES ================= -->
 
 <section class="challenge-grid">
 
-<div class="challenge-card">
-<img src="images/pushup.jpeg">
-<h3>Push-Up Challenge</h3>
-</div>
+<!-- Challenge 1 -->
 
 <div class="challenge-card">
-<img src="images/running.jpeg">
-<h3>10K Running</h3>
+
+<img src="images/pushup.jpeg" alt="Push Up">
+
+<h3>
+
+Push-Up Challenge
+
+</h3>
+
+<p>
+
+Goal : 100 Push-Ups
+
+</p>
+
+<button id="join1">
+
+Join Challenge
+
+</button>
+
+<button id="complete1">
+
+Complete
+
+</button>
+
+<div class="progress">
+
+<div class="progress-fill" id="progress1"></div>
+
 </div>
 
+<p>
+
+Progress :
+
+<span id="percent1">
+
+0%
+
+</span>
+
+</p>
+
+</div>
+
+<!-- Challenge 2 -->
+
 <div class="challenge-card">
-<img src="images/cycling.jpeg">
-<h3>Cycling Challenge</h3>
+
+<img src="images/running.jpeg" alt="Running">
+
+<h3>
+
+10K Running
+
+</h3>
+
+<p>
+
+Goal : Run 10 Kilometers
+
+</p>
+
+<button id="join2">
+
+Join Challenge
+
+</button>
+
+<button id="complete2">
+
+Complete
+
+</button>
+
+<div class="progress">
+
+<div class="progress-fill" id="progress2"></div>
+
+</div>
+
+<p>
+
+Progress :
+
+<span id="percent2">
+
+0%
+
+</span>
+
+</p>
+
+</div>
+
+<!-- Challenge 3 -->
+
+<div class="challenge-card">
+
+<img src="images/cycling.jpeg" alt="Cycling">
+
+<h3>
+
+Cycling Challenge
+
+</h3>
+
+<p>
+
+Goal : Cycle 20 Kilometers
+
+</p>
+
+<button id="join3">
+
+Join Challenge
+
+</button>
+
+<button id="complete3">
+
+Complete
+
+</button>
+
+<div class="progress">
+
+<div class="progress-fill" id="progress3"></div>
+
+</div>
+
+<p>
+
+Progress :
+
+<span id="percent3">
+
+0%
+
+</span>
+
+</p>
+
 </div>
 
 </section>
+
+<!-- ================= OVERALL PROGRESS ================= -->
+
+<section class="overall">
+
+<h2>
+
+Overall Progress
+
+</h2>
+
+<h3>
+
+Completed Challenges :
+
+<span id="completedCount">
+
+0
+
+</span>
+
+/3
+
+</h3>
+
+<div class="progress">
+
+<div class="progress-fill" id="overallProgress"></div>
+
+</div>
+
+<br>
+
+<button id="resetBtn">
+
+Reset Challenges
+
+</button>
+
+</section>
+
+<!-- ================= BADGES ================= -->
 
 <section class="badges">
 
-<h2>Achievement Badges</h2>
+<h2>
 
-<div class="badge">🔥 7 Day Streak</div>
-<div class="badge">💪 Fitness Warrior</div>
-<div class="badge">🏆 Champion</div>
+Achievement Badges
+
+</h2>
+
+<div class="badge" id="badge1">
+
+🔥 7 Day Streak
+
+</div>
+
+<div class="badge" id="badge2">
+
+💪 Fitness Warrior
+
+</div>
+
+<div class="badge" id="badge3">
+
+🏆 Champion
+
+</div>
 
 </section>
 
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h3>
+
+Fitness Battle Arena
+
+</h3>
+
+<p>
+
+Stay Strong • Stay Consistent • Never Give Up
+
+</p>
+
+</footer>
+
+<script src="challenge.js"></script>
+
 </body>
+
 </html>

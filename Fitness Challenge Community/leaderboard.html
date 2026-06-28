@@ -1,53 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Leaderboard</title>
-<link rel="stylesheet" href="leaderboard.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leaderboard</title>
+
+    <link rel="stylesheet" href="leaderboard.css">
+
 </head>
+
 <body>
 
-<header>
-<div class="logo">Fitness Battle Arena</div>
+    <!-- ================= HEADER ================= -->
 
-<nav>
-<a href="index.html">Home</a>
-<a href="battle.html">Battle Mode</a>
-<a href="challenge.html">Challenges</a>
-<a href="leaderboard.html">Leaderboard</a>
-<a href="profile.html">Profile</a>
-</nav>
-</header>
+    <header>
 
-<section class="leaderboard">
+        <div class="logo">
+            Fitness Battle Arena
+        </div>
 
-<h1>🏆 TOP CHAMPIONS</h1>
+        <nav>
 
-<div class="podium">
+            <a href="index.html">Home</a>
+            <a href="battle.html">Battle Mode</a>
+            <a href="challenge.html">Challenges</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="profile.html">Profile</a>
 
-<div class="second">
-    <img src="images/profile2.jpeg">
-🥈
-<h3>Nikhil</h3>
-<p>920</p>
-</div>
+        </nav>
 
-<div class="first">
-    <img src="images/raj1.jpeg">
-🥇
-<h3>Raj</h3>
-<p>980</p>
-</div>
+        <button id="themeToggle">
+            🌙 Dark
+        </button>
 
-<div class="third">
-    <img src="images/priyanshu1.jpeg">
-🥉
-<h3>Priyanshu</h3>
-<p>890</p>
-</div>
+    </header>
 
-</div>
+    <!-- ================= TITLE ================= -->
 
-</section>
+    <section class="leaderboard">
+
+        <h1 id="leaderboardTitle">
+            🏆 TOP CHAMPIONS
+        </h1>
+
+        <p id="leaderboardStatus">
+            Live Leaderboard Ranking
+        </p>
+
+        <div class="podium">
+
+            <!-- SECOND -->
+
+            <div class="second player-card">
+
+                <img src="images/mine1.jpg" alt="Nikhil">
+
+                <h2>🥈</h2>
+
+                <h3 id="name2">
+                    Nikhil
+                </h3>
+
+                <p>
+                    Score :
+                    <span id="score2">
+                        920
+                    </span>
+                </p>
+
+                <button id="addScore2">
+                    +10 Score
+                </button>
+
+                <div class="progress">
+
+                    <div class="progress-fill" id="progress2"></div>
+
+                </div>
+
+            </div>
+
+            <!-- FIRST -->
+
+            <div class="first player-card">
+
+                <img src="images/raj1.jpeg" alt="Raj">
+
+                <h2>🥇</h2>
+
+                <h3 id="name1">
+                    Raj
+                </h3>
+
+                <p>
+                    Score :
+                    <span id="score1">
+                        980
+                    </span>
+                </p>
+
+                <button id="addScore1">
+                    +10 Score
+                </button>
+
+                <div class="progress">
+
+                    <div class="progress-fill" id="progress1"></div>
+
+                </div>
+
+            </div>
+
+            <!-- THIRD -->
+
+            <div class="third player-card">
+
+                <img src="images/priyanshu1.jpeg" alt="Priyanshu">
+
+                <h2>🥉</h2>
+
+                <h3 id="name3">
+                    Priyanshu
+                </h3>
+
+                <p>
+                    Score :
+                    <span id="score3">
+                        890
+                    </span>
+                </p>
+
+                <button id="addScore3">
+                    +10 Score
+                </button>
+
+                <div class="progress">
+
+                    <div class="progress-fill" id="progress3"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= WINNER ================= -->
+
+        <div class="winner-section">
+
+            <h2>
+
+                Current Champion :
+
+                <span id="winnerName">
+
+                    Raj
+
+                </span>
+
+            </h2>
+
+        </div>
+
+        <!-- ================= RESET ================= -->
+
+        <div class="reset-section">
+
+            <button id="resetLeaderboard">
+
+                Reset Leaderboard
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Fitness Battle Arena
+
+        </p>
+
+    </footer>
+
+    <script src="leaderboard.js"></script>
 
 </body>
+
 </html>

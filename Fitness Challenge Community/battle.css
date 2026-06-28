@@ -1,64 +1,330 @@
-body{
-background:#0f172a;
-color:white;
-font-family:Arial;
-margin:0;
+/* ===========================
+   Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
+body{
+    background:#0f172a;
+    color:white;
+    transition:.4s;
+}
+
+/* ===========================
+   Header
+=========================== */
+
 header{
-display:flex;
-justify-content:space-between;
-padding:20px 8%;
-background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#22c55e;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
 }
+
+nav a:hover{
+    color:#22c55e;
+}
+
+/* Theme Button */
+
+#themeToggle{
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+#themeToggle:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   Banner
+=========================== */
 
 .banner{
-text-align:center;
-padding:50px;
+    text-align:center;
+    padding:50px;
 }
 
+.banner h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.banner p{
+    color:#d1d5db;
+    font-size:18px;
+}
+
+/* ===========================
+   Battle
+=========================== */
+
 .battle{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:50px;
-padding:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    padding:60px;
+    flex-wrap:wrap;
 }
 
 .fighter{
-text-align:center;
+    text-align:center;
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    width:320px;
+    transition:.3s;
+}
+
+.fighter:hover{
+    transform:translateY(-8px);
 }
 
 .fighter img{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid #22c55e;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #22c55e;
+}
+
+.fighter h2{
+    margin:15px 0;
+}
+
+.fighter p{
+    margin-bottom:15px;
+}
+
+/* Vote Button */
+
+.fighter button{
+    padding:12px 25px;
+    background:#22c55e;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.fighter button:hover{
+    transform:scale(1.05);
 }
 
 .vs{
-font-size:60px;
-color:#22c55e;
+    font-size:70px;
+    color:#22c55e;
+    font-weight:bold;
 }
 
+/* ===========================
+   Progress Bar
+=========================== */
+
+.progress{
+    width:100%;
+    height:18px;
+    background:#334155;
+    border-radius:20px;
+    margin-top:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:#22c55e;
+    transition:.5s;
+}
+
+/* ===========================
+   Result
+=========================== */
+
+.result{
+    text-align:center;
+    padding:40px;
+}
+
+#winner{
+    color:#22c55e;
+}
+
+#resetBattle{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ef4444;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#resetBattle:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   Battle Cards
+=========================== */
+
 .battle-cards{
-display:flex;
-justify-content:center;
-gap:30px;
-padding:40px;
-flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:50px;
+    flex-wrap:wrap;
 }
 
 .card{
-background:#1e293b;
-padding:25px;
-width:300px;
-border-radius:20px;
+    background:#1e293b;
+    width:320px;
+    padding:25px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#22c55e;
+    margin-bottom:15px;
+}
+
+.card p{
+    margin:10px 0;
+}
+
+.card h4{
+    margin-top:20px;
+    color:gold;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* ===========================
+   Light Mode
+=========================== */
+
+.light-mode{
+    background:#f5f5f5;
+    color:#111;
+}
+
+.light-mode header,
+.light-mode footer{
+    background:white;
+}
+
+.light-mode nav a{
+    color:#111;
+}
+
+.light-mode nav a:hover{
+    color:#22c55e;
+}
+
+.light-mode .fighter,
+.light-mode .card{
+    background:white;
+    color:#111;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.light-mode .progress{
+    background:#ddd;
+}
+
+.light-mode .progress-fill{
+    background:#16a34a;
+}
+
+.light-mode .banner p{
+    color:#444;
+}
+
+.light-mode #themeToggle{
+    background:#111827;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.battle{
+    flex-direction:column;
+}
+
+.vs{
+    font-size:50px;
+}
+
+.banner h1{
+    font-size:32px;
+}
+
+.fighter{
+    width:90%;
+}
+
+.card{
+    width:90%;
+}
+
 }

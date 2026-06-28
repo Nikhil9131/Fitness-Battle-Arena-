@@ -1,85 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Profile</title>
-<link rel="stylesheet" href="profile.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fitness Battle Arena | Profile</title>
+
+    <link rel="stylesheet" href="profile.css">
+
 </head>
+
 <body>
 
+    <!-- ================= HEADER ================= -->
 
-<header>
-<div class="logo">Fitness Battle Arena</div>
+    <header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="battle.html">Battle Mode</a>
-<a href="challenge.html">Challenges</a>
-<a href="leaderboard.html">Leaderboard</a>
-<a href="profile.html">Profile</a>
-</nav>
-</header>
+        <div class="logo">
 
-<section class="profile">
+            Fitness Battle Arena
 
-<div class="profile-card">
+        </div>
 
-<img src="images/profile2.jpeg">
+        <nav>
 
-<h2>Nikhil Rathore</h2>
+            <a href="index.html">Home</a>
 
-<p>Fitness Goal: Muscle Building</p>
+            <a href="battle.html">Battle Mode</a>
 
-<p>Current Streak: 30 Days</p>
+            <a href="challenge.html">Challenges</a>
 
-</div>
+            <a href="leaderboard.html">Leaderboard</a>
 
-</section>
+            <a href="profile.html">Profile</a>
 
-<section class="transformation">
+        </nav>
 
-<h1>Transformation Journey</h1>
+        <button id="themeToggle">
 
-<div class="gallery">
+            🌙 Dark
 
-<div class="photo">
-<img src="images/raj2.jpeg">
-<h3>Day 1</h3>
-</div>
+        </button>
 
-<div class="arrow">➡</div>
+    </header>
 
-<div class="photo">
-<img src="images/raj1.jpeg">
-<h3>Day 90</h3>
-</div>
+    <!-- ================= PROFILE ================= -->
 
-</div>
+    <section class="profile">
 
-</section>
+        <div class="profile-card">
 
-<section class="analytics">
+            <img src="images/mine1.jpg"
+                 id="profileImage"
+                 alt="Profile Image">
 
-<div class="box">
-<h2>120</h2>
-<p>Workouts</p>
-</div>
+            <h2 id="profileName">
 
-<div class="box">
-<h2>35000</h2>
-<p>Calories</p>
-</div>
+                Nikhil Rathore
 
-<div class="box">
-<h2>12</h2>
-<p>Badges</p>
-</div>
+            </h2>
 
-<div class="box">
-<h2>30</h2>
-<p>Streak</p>
-</div>
+            <p id="fitnessGoal">
 
-</section>
+                💪 Fitness Goal : Muscle Building
 
-</body>
-</html>
+            </p>
+
+            <p id="streakText">
+
+                🔥 Current Streak : 30 Days
+
+            </p>
+
+            <button id="editProfile">
+
+                Edit Profile
+
+            </button>
+
+            <button id="increaseStreak">
+
+                +1 Streak
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TRANSFORMATION ================= -->
+
+    <section class="transformation">
+
+        <h1 id="transformTitle">
+
+            Transformation Journey
+
+        </h1>
+
+        <div class="gallery">
+
+            <div class="photo">
+
+                <img src="images/raj2.jpeg" alt="Day 1">
+
+                <h3>
+
+                    Day 1
+
+                </h3>
+
+            </div>
+
+            <div class="arrow">
+
+                ➜
+
+            </div>
+
+            <div class="photo">
+
+                <img src="images/raj1.jpeg" alt="Day 90">
+
+                <h3>
+
+                    Day 90
+
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ANALYTICS ================= -->
+
+    <section class="analytics">
+
+        <div class="box">
+
+            <h2 id="workoutCount">
+
+                120
+
+            </h2>
+
+            <p>
+
+                Workouts
+
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <h2 id="calorieCount">
+
+                35000
+
+            </h2>
+
+            <p>
+
+                Calories Burned
+
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <h2 id="badgeCount">
+
+                12
+
+            </h2>
+
+            <p>
+
+                Badges
+
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <h2 id="streakCount">
+
+                30
+
+            </h2>
+
+            <p>
+
+                Streak
+
+            </p>
+
+        </div>
+
+    </section>

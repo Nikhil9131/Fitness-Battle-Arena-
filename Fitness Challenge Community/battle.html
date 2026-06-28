@@ -1,64 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Battle Mode</title>
+
 <link rel="stylesheet" href="battle.css">
+
 </head>
+
 <body>
 
+<!-- ================= Header ================= -->
+
 <header>
-<div class="logo">Fitness Battle Arena</div>
+
+<div class="logo">
+Fitness Battle Arena
+</div>
 
 <nav>
+
 <a href="index.html">Home</a>
 <a href="battle.html">Battle Mode</a>
 <a href="challenge.html">Challenges</a>
 <a href="leaderboard.html">Leaderboard</a>
 <a href="profile.html">Profile</a>
+
 </nav>
+
+<button id="themeToggle">
+🌙 Dark
+</button>
+
 </header>
 
+<!-- ================= Banner ================= -->
+
 <section class="banner">
-    <h1>⚔ FITNESS BATTLE ARENA ⚔</h1>
+
+<h1 id="battleTitle">
+⚔ FITNESS BATTLE ARENA ⚔
+</h1>
+
+<p id="battleStatus">
+Choose your champion and vote!
+</p>
+
 </section>
+
+<!-- ================= Fighters ================= -->
 
 <section class="battle">
 
-    <div class="fighter">
-        <img src="images/raj1.jpeg">
-        <h2>Raj</h2>
-        <p>Level 15</p>
-    </div>
+<div class="fighter">
 
-    <div class="vs">VS</div>
+<img src="images/raj1.jpeg" alt="Raj">
 
-    <div class="fighter">
-        <img src="images/profile2.jpeg">
-        <h2>Nikhil</h2>
-        <p>Level 17</p>
-    </div>
+<h2 id="fighter1Name">
+Raj
+</h2>
+
+<p>
+Level 15
+</p>
+
+<h3>
+Votes :
+<span id="rajVotes">0</span>
+</h3>
+
+<button id="voteRaj">
+Vote Raj
+</button>
+
+<div class="progress">
+
+<div class="progress-fill" id="rajProgress"></div>
+
+</div>
+
+</div>
+
+<div class="vs">
+
+VS
+
+</div>
+
+<div class="fighter">
+
+<img src="images/mine1.jpg" alt="Nikhil">
+
+<h2 id="fighter2Name">
+Nikhil
+</h2>
+
+<p>
+Level 17
+</p>
+
+<h3>
+Votes :
+<span id="nikhilVotes">0</span>
+</h3>
+
+<button id="voteNikhil">
+Vote Nikhil
+</button>
+
+<div class="progress">
+
+<div class="progress-fill" id="nikhilProgress"></div>
+
+</div>
+
+</div>
 
 </section>
+
+<!-- ================= Battle Result ================= -->
+
+<section class="result">
+
+<h2>
+
+Winner :
+
+<span id="winner">
+
+No Winner Yet
+
+</span>
+
+</h2>
+
+<button id="resetBattle">
+
+Reset Battle
+
+</button>
+
+</section>
+
+<!-- ================= Battle Cards ================= -->
 
 <section class="battle-cards">
 
-    <div class="card">
-        <h3>Push-Up Battle</h3>
-        <p>Rahul - 90</p>
-        <p>Nikhil - 95</p>
-        <h4>🏆 Winner: Nikhil</h4>
-    </div>
+<div class="card">
 
-    <div class="card">
-        <h3>Running Battle</h3>
-        <p>Rahul - 8 km</p>
-        <p>Nikhil - 10 km</p>
-        <h4>🏆 Winner: Nikhil</h4>
-    </div>
+<h3>
+
+Push-Up Battle
+
+</h3>
+
+<p>
+
+Raj - <span id="pushRaj">90</span>
+
+</p>
+
+<p>
+
+Nikhil - <span id="pushNikhil">95</span>
+
+</p>
+
+<h4 id="pushWinner">
+
+🏆 Winner : Nikhil
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Running Battle
+
+</h3>
+
+<p>
+
+Raj - <span id="runRaj">8</span> km
+
+</p>
+
+<p>
+
+Nikhil - <span id="runNikhil">10</span> km
+
+</p>
+
+<h4 id="runWinner">
+
+🏆 Winner : Nikhil
+
+</h4>
+
+</div>
 
 </section>
 
+<!-- ================= Footer ================= -->
+
+<footer>
+
+<h3>
+
+Fitness Battle Arena
+
+</h3>
+
+<p>
+
+Battle • Compete • Win
+
+</p>
+
+</footer>
+
+<script src="battle.js"></script>
+
 </body>
+
 </html>

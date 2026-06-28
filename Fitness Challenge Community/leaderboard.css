@@ -1,3 +1,7 @@
+/* ==========================
+   RESET
+========================== */
+
 *{
     margin:0;
     padding:0;
@@ -6,20 +10,28 @@
 }
 
 body{
-    background:#f4f4f4;
+    background:#0f172a;
+    color:white;
+    transition:0.4s;
 }
 
-/* Header */
+/* ==========================
+   HEADER
+========================== */
+
 header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 50px;
-    background:#111;
+    padding:20px 8%;
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .logo{
-    color:white;
+    color:#22c55e;
     font-size:28px;
     font-weight:bold;
 }
@@ -29,123 +41,409 @@ nav a{
     text-decoration:none;
     margin-left:25px;
     font-size:18px;
+    transition:.3s;
 }
 
 nav a:hover{
-    color:#ff9800;
+    color:#22c55e;
 }
 
-/* Leaderboard Section */
+/* Theme Button */
+
+#themeToggle{
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#themeToggle:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================
+   LEADERBOARD
+========================== */
+
 .leaderboard{
+
     min-height:100vh;
+
     background:
-    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
     url("images/leaderboard-bg.jpg");
+
     background-size:cover;
     background-position:center;
-    background-repeat:no-repeat;
 
     text-align:center;
-    padding:80px 20px;
+
+    padding:60px 20px;
 }
 
 .leaderboard h1{
-    color:white;
+
     font-size:50px;
-    margin-bottom:60px;
+
+    margin-bottom:15px;
+
 }
 
-/* Podium */
+#leaderboardStatus{
+
+    color:#ddd;
+
+    margin-bottom:50px;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+   PODIUM
+========================== */
+
 .podium{
+
     display:flex;
+
     justify-content:center;
+
     align-items:flex-end;
+
     gap:30px;
+
     flex-wrap:wrap;
+
 }
 
-/* Common Card */
-.first,
-.second,
-.third{
-    width:220px;
-    padding:20px;
-    border-radius:15px;
-    color:white;
+/* ==========================
+   PLAYER CARD
+========================== */
+
+.player-card{
+
+    width:260px;
+
+    padding:25px;
+
+    border-radius:20px;
+
     text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+
+    transition:.3s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+}
+
+.player-card:hover{
+
+    transform:translateY(-10px);
+
 }
 
 .first{
+
     background:gold;
+
     color:black;
-    height:340px;
+
+    height:420px;
+
 }
 
 .second{
+
     background:silver;
+
     color:black;
-    height:280px;
+
+    height:360px;
+
 }
 
 .third{
+
     background:#cd7f32;
-    height:240px;
+
+    color:white;
+
+    height:320px;
+
 }
 
-/* Profile Images */
-.first img,
-.second img,
-.third img{
-    width:100px;
-    height:100px;
+/* Images */
+
+.player-card img{
+
+    width:110px;
+
+    height:110px;
+
     border-radius:50%;
+
     object-fit:cover;
+
     border:4px solid white;
+
     margin-bottom:15px;
+
 }
 
-.first h3,
-.second h3,
-.third h3{
-    margin-top:10px;
+.player-card h3{
+
+    margin:10px 0;
+
     font-size:24px;
+
 }
 
-.first p,
-.second p,
-.third p{
+.player-card p{
+
     font-size:20px;
+
     font-weight:bold;
-    margin-top:10px;
+
+    margin-bottom:20px;
+
 }
 
-/* Responsive */
+/* ==========================
+   SCORE BUTTON
+========================== */
+
+.player-card button{
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#22c55e;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.player-card button:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+   PROGRESS BAR
+========================== */
+
+.progress{
+
+    width:100%;
+
+    height:18px;
+
+    background:#ddd;
+
+    border-radius:20px;
+
+    margin-top:20px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    width:0%;
+
+    height:100%;
+
+    background:#16a34a;
+
+    transition:.5s;
+
+}
+
+/* ==========================
+   WINNER
+========================== */
+
+.winner-section{
+
+    margin-top:60px;
+
+}
+
+#winnerName{
+
+    color:#22c55e;
+
+}
+
+/* ==========================
+   RESET BUTTON
+========================== */
+
+.reset-section{
+
+    margin-top:30px;
+
+}
+
+#resetLeaderboard{
+
+    padding:12px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ef4444;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#resetLeaderboard:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    background:#111827;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+/* ==========================
+   LIGHT MODE
+========================== */
+
+.light-mode{
+
+    background:#f4f4f4;
+
+    color:#111;
+
+}
+
+.light-mode header,
+
+.light-mode footer{
+
+    background:white;
+
+}
+
+.light-mode nav a{
+
+    color:#111;
+
+}
+
+.light-mode nav a:hover{
+
+    color:#16a34a;
+
+}
+
+.light-mode .leaderboard{
+
+    color:white;
+
+}
+
+.light-mode .player-card{
+
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+}
+
+.light-mode #themeToggle{
+
+    background:#111827;
+
+}
+
+.light-mode .progress{
+
+    background:#ccc;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
 @media(max-width:768px){
 
-    header{
-        flex-direction:column;
-        gap:15px;
-    }
+header{
 
-    nav{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
+    flex-direction:column;
 
-    .podium{
-        flex-direction:column;
-        align-items:center;
-    }
+    gap:20px;
 
-    .first,
-    .second,
-    .third{
-        height:auto;
-    }
+}
 
-    .leaderboard h1{
-        font-size:35px;
-    }
+nav{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.podium{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.first,
+.second,
+.third{
+
+    width:90%;
+
+    height:auto;
+
+}
+
+.leaderboard h1{
+
+    font-size:36px;
+
+}
+
+.player-card{
+
+    margin-bottom:20px;
+
+}
+
 }

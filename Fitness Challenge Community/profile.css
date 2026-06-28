@@ -1,80 +1,416 @@
-body{
-background:#0f172a;
-color:white;
-font-family:Arial;
-margin:0;
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
+body{
+    background:#0f172a;
+    color:white;
+    transition:0.4s;
+}
+
+/* =========================
+   HEADER
+========================= */
+
 header{
-display:flex;
-justify-content:space-between;
-padding:20px 8%;
-background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#22c55e;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
 }
 
+nav a:hover{
+    color:#22c55e;
+}
+
+/* Theme Button */
+
+#themeToggle{
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#themeToggle:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   PROFILE
+========================= */
+
 .profile{
-padding:50px;
-text-align:center;
+    padding:50px;
+    display:flex;
+    justify-content:center;
 }
 
 .profile-card{
-background:#1e293b;
-width:350px;
-margin:auto;
-padding:30px;
-border-radius:20px;
+    width:380px;
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.profile-card:hover{
+    transform:translateY(-8px);
 }
 
 .profile-card img{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #22c55e;
 }
 
+.profile-card h2{
+    margin:20px 0;
+}
+
+.profile-card p{
+    margin:10px 0;
+}
+
+.profile-card button{
+    margin:10px;
+    padding:12px 20px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    color:white;
+    background:#22c55e;
+    transition:.3s;
+}
+
+.profile-card button:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   TRANSFORMATION
+========================= */
+
 .transformation{
-padding:60px;
-text-align:center;
+    padding:60px;
+    text-align:center;
+}
+
+.transformation h1{
+    margin-bottom:40px;
 }
 
 .gallery{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:30px;
-flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
 }
 
 .photo img{
-width:300px;
-height:350px;
-object-fit:cover;
-border-radius:20px;
+    width:300px;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
 }
 
 .arrow{
-font-size:60px;
-color:#22c55e;
+    font-size:60px;
+    color:#22c55e;
 }
 
+/* =========================
+   ANALYTICS
+========================= */
+
 .analytics{
-display:flex;
-justify-content:center;
-gap:20px;
-padding:50px;
-flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    padding:50px;
 }
 
 .box{
-width:220px;
-background:#1e293b;
-padding:25px;
-border-radius:20px;
-text-align:center;
+    width:220px;
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+}
+
+.box h2{
+    color:#22c55e;
+    margin-bottom:10px;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-section{
+    text-align:center;
+    padding:50px;
+}
+
+.progress{
+    width:70%;
+    height:20px;
+    background:#374151;
+    margin:20px auto;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:60%;
+    height:100%;
+    background:#22c55e;
+    transition:.5s;
+}
+
+#increaseProgress{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+}
+
+/* =========================
+   GOALS
+========================= */
+
+.goals{
+    text-align:center;
+    padding:50px;
+}
+
+.goal-card{
+    width:350px;
+    margin:auto;
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+}
+
+.goal-card button{
+    margin-top:20px;
+    padding:12px 20px;
+    border:none;
+    border-radius:25px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badges{
+    text-align:center;
+    padding:50px;
+}
+
+.badge-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.badge{
+    width:180px;
+    background:#22c55e;
+    padding:20px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.badge:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   BMI
+========================= */
+
+.bmi{
+    text-align:center;
+    padding:50px;
+}
+
+.bmi input{
+    padding:12px;
+    margin:10px;
+    width:180px;
+    border:none;
+    border-radius:10px;
+}
+
+#calculateBMI{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+}
+
+#bmiResult{
+    margin-top:20px;
+    font-size:20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    margin-top:50px;
+    background:#111827;
+    text-align:center;
+    padding:30px;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light-mode{
+    background:#f4f4f4;
+    color:#111;
+}
+
+.light-mode header,
+.light-mode footer{
+    background:white;
+}
+
+.light-mode nav a{
+    color:#111;
+}
+
+.light-mode nav a:hover{
+    color:#22c55e;
+}
+
+.light-mode .profile-card,
+.light-mode .box,
+.light-mode .goal-card{
+    background:white;
+    color:#111;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.light-mode .progress{
+    background:#ddd;
+}
+
+.light-mode .progress-fill{
+    background:#16a34a;
+}
+
+.light-mode .badge{
+    background:#16a34a;
+}
+
+.light-mode #themeToggle{
+    background:#111827;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.gallery{
+    flex-direction:column;
+}
+
+.analytics{
+    flex-direction:column;
+    align-items:center;
+}
+
+.box{
+    width:90%;
+}
+
+.profile-card{
+    width:90%;
+}
+
+.progress{
+    width:90%;
+}
+
+.goal-card{
+    width:90%;
+}
+
+.badge-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.photo img{
+    width:90%;
+    height:auto;
+}
+
+.arrow{
+    transform:rotate(90deg);
+}
+
 }
