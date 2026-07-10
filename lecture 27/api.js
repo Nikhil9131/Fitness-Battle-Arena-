@@ -19,11 +19,11 @@ app.get("/students/:id", (req, res) => {
   res.json(student);
 });
 
-app.post("/student", (req, res) => {
+app.post("/students", (req, res) => {
   const newStudent = {
     id: data.length+1,
-    name: req.params.name,
-    age: req.params.age,
+    name: req.body.name,
+    age: req.body.age,
   };
   data.push(newStudent);
   res.status(201).json({
